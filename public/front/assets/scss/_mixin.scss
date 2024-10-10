@@ -1,0 +1,28 @@
+@mixin font($fw, $fz, $lh: 1) {
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+  font-family: $siteFont;
+}
+@mixin media($me) {
+  @media (max-width: $me) {
+    @content;
+  }
+}
+
+%input-select {
+  background: #f3f3f3;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding-left: 16px;
+  height: 60px;
+  border-radius: 0.75rem;
+  @include font(500, 14px, 1.2);
+}
+
+%fcc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
